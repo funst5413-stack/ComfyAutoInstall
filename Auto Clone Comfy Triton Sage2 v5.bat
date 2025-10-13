@@ -307,7 +307,7 @@ echo Choose which version of SageAttention to install:
 echo.
 echo [1] SageAttention v1.0.6
 echo [2] SageAttention v2.2 (Compile)
-echo [3] SageAttention v2.2 (From a WHL) 
+echo [3] SageAttention v2.2 (From a WHL for Pytorch 2.8) 
 set /p choice="Enter your choice (1 , 2 or 3): "
 
 if "%choice%"=="1" (
@@ -334,7 +334,6 @@ if "%choice%"=="1" (
     echo Installing SageAttention v2...
     cd venv
     pip install https://github.com/woct0rdho/SageAttention/releases/download/v2.2.0-windows.post3/sageattention-2.2.0+cu128torch2.8.0.post3-cp39-abi3-win_amd64.whl
-    cd ..
     echo Successfully installed SageAttention v2 from WHL.
     echo.
     pause	
@@ -460,3 +459,4 @@ echo.
 endlocal
 pause
 exit /b 1
+
