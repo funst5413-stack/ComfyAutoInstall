@@ -31,7 +31,7 @@ for %%D in ("%path_dirs:;=" "%") do (
 if %found_cl% equ 0 (
     echo cl.exe is NOT found in the PATH - recheck your Paths.
 	pause
-	exit /b 1
+	goto :end_check
 )
 
 :end_check
@@ -416,7 +416,7 @@ if exist "%new_batch_file2%" (
 @REM --------------------------------------------------------------------------------------------------
 @REM Create a batch file to update Comfy via git pull
 @REM Step 1: Define the path for the new batch file
-set "new_batch_file3=Update_Comfy.bat"
+set "new_batch_file3=Git_Pull_Update_Comfy.bat"
 
 @REM Step 2: Create the new batch file with the specified content
 (
@@ -459,4 +459,5 @@ echo.
 endlocal
 pause
 exit /b 1
+
 
