@@ -30,6 +30,7 @@ for %%D in ("%path_dirs:;=" "%") do (
 @REM If cl.exe was not found, print a message
 if %found_cl% equ 0 (
     echo cl.exe is NOT found in the PATH - recheck your Paths.
+    echo if you wish to compile - otherwise ignore .
 	pause
 	goto :end_check
 )
@@ -459,5 +460,6 @@ echo.
 endlocal
 pause
 exit /b 1
+
 
 
