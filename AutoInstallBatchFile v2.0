@@ -27,7 +27,7 @@ echo Next step: Install Comfy and a Venv for it
 echo Installing ComfyUI, installing a Venv within it - choose your Python for it
 
 git clone https://github.com/comfyanonymous/ComfyUI
-cd ComfyUI
+D:\SM\Packages/ComfyUI
 setlocal enabledelayedexpansion
 
 echo.
@@ -35,7 +35,7 @@ echo From Comfy github page: "Python 3.13 is supported but using 3.12 is recomme
 echo.
 
 @REM Step 1: Locate Python installations
-set "PYTHON_DIR=C:\Users\%USERNAME%\AppData\Local\Programs\Python"
+set "PYTHON_DIR=C:\Users\A\AppData\Local\Programs\Python"
 if not exist "%PYTHON_DIR%" (
     echo No Python installations found in %PYTHON_DIR%.
     exit /b
@@ -325,8 +325,8 @@ pip install %WHEEL_URL%
 
 setlocal
 
-set "TRITON_CACHE=C:\Users\%USERNAME%\.triton\cache"
-set "TORCHINDUCTOR_CACHE=C:\Users\%USERNAME%\AppData\Local\Temp\torchinductor_%USERNAME%\triton"
+set "TRITON_CACHE=C:\Users\A\.triton\cache"
+set "TORCHINDUCTOR_CACHE=C:\Users\A\AppData\Local\Temp\torchinductor_%USERNAME%\triton"
 
 if exist "%TRITON_CACHE%" (
     echo Deleting .triton cache...
